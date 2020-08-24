@@ -1,15 +1,54 @@
 ﻿using System;
+using System.Collections.Concurrent;
+using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using System.Threading;
+using System.Threading.Tasks;
+
 
 namespace HelloTask
 {
     class Program
     {
+        public static ConcurrentStack<int> stack =  new ConcurrentStack<int>();
         static void Main(string[] args)
         {
             //Synchronous();
-            //NewThreadToEveryNumber();
-            ThreadPoolToNumbers();
+            // NewThreadToEveryNumber();
+            //ThreadPoolToNumbers();
+            CreateStack();
+            RunTask(stack);
+
+            Console.ReadLine();
+        }
+        public static void RunParallel()
+        {
+            for (int i = 0; i < stack.Count; i++)
+            {
+                Parallel.ForEach(stack, i =>
+                {
+                    Console.WriteLine(i);
+                });
+            }
+        }
+        public static void RunTask(ConcurrentStack<int> stack)
+        {
+            for (int i = 0; i < stack.Count; i++)
+            {
+                Task.Factory.StartNew(()=>
+                {
+                    int num;
+                    stack.TryPop(out num);
+                    Console.WriteLine(num);
+                });
+            }
+        }
+        public static void CreateStack()
+        {
+            for (int i = 0; i <= 5000; i++)
+            {
+                stack.Push(i);
+            }
         }
         public static void Synchronous()
         {
@@ -22,7 +61,7 @@ namespace HelloTask
         {
             for (int i = 0; i <= 1000000; i++)
             {
-               Thread thread =  new Thread(() =>
+                Thread thread = new Thread(() =>
                 {
                     Console.WriteLine(i);
                 });
@@ -34,9 +73,10 @@ namespace HelloTask
         {
             for (int i = 0; i <= 1000000; i++)
             {
-                ThreadPool.QueueUserWorkItem( obj => {
+                ThreadPool.QueueUserWorkItem(obj =>
+                {
                     Console.WriteLine(obj);
-                }, i); 
+                }, i);
             }
         }
     }
