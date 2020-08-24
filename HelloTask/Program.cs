@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace HelloTask
 {
@@ -6,7 +7,14 @@ namespace HelloTask
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Synchronous();
+        }
+        public static void Synchronous()
+        {
+            for (int i = 0; i <= 1000000; i++)
+            {
+                Console.WriteLine(i);
+            }
         }
     }
 }

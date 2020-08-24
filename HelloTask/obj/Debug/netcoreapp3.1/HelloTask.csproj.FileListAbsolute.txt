@@ -1,0 +1,12 @@
+C:\Users\thelittlecitizen16\source\repos\HelloTask\HelloTask\bin\Debug\netcoreapp3.1\HelloTask.exe
+C:\Users\thelittlecitizen16\source\repos\HelloTask\HelloTask\bin\Debug\netcoreapp3.1\HelloTask.deps.json
+C:\Users\thelittlecitizen16\source\repos\HelloTask\HelloTask\bin\Debug\netcoreapp3.1\HelloTask.runtimeconfig.json
+C:\Users\thelittlecitizen16\source\repos\HelloTask\HelloTask\bin\Debug\netcoreapp3.1\HelloTask.runtimeconfig.dev.json
+C:\Users\thelittlecitizen16\source\repos\HelloTask\HelloTask\bin\Debug\netcoreapp3.1\HelloTask.dll
+C:\Users\thelittlecitizen16\source\repos\HelloTask\HelloTask\bin\Debug\netcoreapp3.1\HelloTask.pdb
+C:\Users\thelittlecitizen16\source\repos\HelloTask\HelloTask\obj\Debug\netcoreapp3.1\HelloTask.AssemblyInfoInputs.cache
+C:\Users\thelittlecitizen16\source\repos\HelloTask\HelloTask\obj\Debug\netcoreapp3.1\HelloTask.AssemblyInfo.cs
+C:\Users\thelittlecitizen16\source\repos\HelloTask\HelloTask\obj\Debug\netcoreapp3.1\HelloTask.csproj.CoreCompileInputs.cache
+C:\Users\thelittlecitizen16\source\repos\HelloTask\HelloTask\obj\Debug\netcoreapp3.1\HelloTask.dll
+C:\Users\thelittlecitizen16\source\repos\HelloTask\HelloTask\obj\Debug\netcoreapp3.1\HelloTask.pdb
+C:\Users\thelittlecitizen16\source\repos\HelloTask\HelloTask\obj\Debug\netcoreapp3.1\HelloTask.genruntimeconfig.cache
