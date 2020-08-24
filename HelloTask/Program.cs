@@ -8,7 +8,8 @@ namespace HelloTask
         static void Main(string[] args)
         {
             //Synchronous();
-            NewThreadToEveryNumber();
+            //NewThreadToEveryNumber();
+            ThreadPoolToNumbers();
         }
         public static void Synchronous()
         {
@@ -27,6 +28,15 @@ namespace HelloTask
                 });
 
                 thread.Start();
+            }
+        }
+        public static void ThreadPoolToNumbers()
+        {
+            for (int i = 0; i <= 1000000; i++)
+            {
+                ThreadPool.QueueUserWorkItem( obj => {
+                    Console.WriteLine(obj);
+                }, i); 
             }
         }
     }
