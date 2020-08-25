@@ -10,3 +10,4 @@ C:\Users\thelittlecitizen16\source\repos\HelloTask\HelloTask\obj\Debug\netcoreap
 C:\Users\thelittlecitizen16\source\repos\HelloTask\HelloTask\obj\Debug\netcoreapp3.1\HelloTask.dll
 C:\Users\thelittlecitizen16\source\repos\HelloTask\HelloTask\obj\Debug\netcoreapp3.1\HelloTask.pdb
 C:\Users\thelittlecitizen16\source\repos\HelloTask\HelloTask\obj\Debug\netcoreapp3.1\HelloTask.genruntimeconfig.cache
+C:\Users\thelittlecitizen16\source\repos\HelloTask\HelloTask\obj\Debug\netcoreapp3.1\HelloTask.csprojAssemblyReference.cache

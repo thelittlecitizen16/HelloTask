@@ -33,13 +33,17 @@ namespace HelloTask
         }
         public static void RunTask(ConcurrentStack<int> stack)
         {
-            for (int i = 0; i < stack.Count; i++)
+            for (int i = 0; i <3; i++)
             {
                 Task.Factory.StartNew(()=>
                 {
-                    int num;
-                    stack.TryPop(out num);
-                    Console.WriteLine(num);
+                    while (!stack.IsEmpty)
+                    {
+                        int num;
+                        stack.TryPop(out num);
+                        Console.WriteLine(num);
+                    }
+                   
                 });
             }
         }
@@ -73,11 +77,11 @@ namespace HelloTask
         {
             for (int i = 0; i <= 1000000; i++)
             {
-                ThreadPool.QueueUserWorkItem(obj =>
+                ThreadPool.QueueUserWorkItem( place =>
                 {
-                    Console.WriteLine(obj);
-                }, i);
-            }
+                    Console.WriteLine(place);
+                } , i);
+           }
         }
     }
 }
